@@ -3,6 +3,7 @@ package hello.jdbc.service;
 import hello.jdbc.domain.Member;
 import hello.jdbc.repository.MemberRepository;
 import hello.jdbc.repository.MemberRepositroyV4_1;
+import hello.jdbc.repository.MemberRepositroyV4_2;
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.DisplayName;
@@ -46,7 +47,7 @@ class MemberServiceV4Test {
 
         @Bean
         MemberRepository memberRepository() {
-            return new MemberRepositroyV4_1(dataSource);
+            return new MemberRepositroyV4_2(dataSource);
         }
 
         @Bean
